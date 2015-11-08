@@ -1,0 +1,186 @@
+{
+  "data": {
+    "error": [
+      {
+        "status": "new",
+        "location": "alma",
+        "description": "fa",
+        "date": "2015-11-08T17:25:19.946Z",
+        "createdAt": "2015-11-08T17:25:19.948Z",
+        "updatedAt": "2015-11-08T17:25:19.948Z",
+        "id": 1
+      },
+      {
+        "status": "new",
+        "location": "fa",
+        "description": "alma",
+        "date": "2015-11-08T18:39:47.031Z",
+        "createdAt": "2015-11-08T18:39:47.034Z",
+        "updatedAt": "2015-11-08T18:39:47.034Z",
+        "id": 2
+      }
+    ],
+    "timesheet": [
+      {
+        "status": "new",
+        "location": "alma",
+        "description": "fa",
+        "date": "2015-11-08T19:36:01.066Z",
+        "createdAt": "2015-11-08T19:36:01.067Z",
+        "updatedAt": "2015-11-08T19:36:01.067Z",
+        "id": 1
+      },
+      {
+        "status": "new",
+        "location": "am",
+        "description": "ba",
+        "date": "2015-11-08T19:48:40.532Z",
+        "createdAt": "2015-11-08T19:48:40.534Z",
+        "updatedAt": "2015-11-08T19:48:40.534Z",
+        "id": 2
+      }
+    ],
+    "user": [
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "$2a$10$bY4rfyyZBTwrGe3zdfptg.DRGkc.NHIpnJqN7gjvCEQuThuWIeUya",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-08T17:13:11.575Z",
+        "updatedAt": "2015-11-08T17:13:11.575Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "error": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "timesheet": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "error": {
+      "id": 2
+    },
+    "user": {
+      "id": 1
+    },
+    "timesheet": {
+      "id": 2
+    }
+  }
+}
