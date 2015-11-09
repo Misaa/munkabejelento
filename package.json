@@ -1,0 +1,38 @@
+{
+  "name": "timesheets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.14.1",
+    "connect-flash": "^0.1.1",
+    "express-validator": "^2.17.1",
+    "hbs": "^3.1.1",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "bower": "^1.6.3",
+    "passport-local": "^1.0.0",
+    "passport": "^0.3.0",
+    "sails-memory": "^0.10.5",
+    "passport-google-oauth": "^0.2.0",
+    "sails-disk": "^0.10.8",
+    "sails-postgresql": "^0.10.16",
+    "waterline": "^0.10.26"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Misaa/munkabejelento.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Misaa/munkabejelento/issues"
+  },
+  "homepage": "https://github.com/Misaa/munkabejelento#readme"
+}
