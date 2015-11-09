@@ -5,7 +5,7 @@ module.exports = {
     identity: 'user',
     connection: 'default',
     attributes: {
-        neptun: {
+        email: {
             type: 'string',
             required: true,
             unique: true,

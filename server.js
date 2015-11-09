@@ -51,15 +51,15 @@ passport.deserializeUser(function(obj, done) {
 
 // Local Strategy for sign-up
 passport.use('local-signup', new LocalStrategy({
-        usernameField: 'neptun',
+        usernameField: 'email',
         passwordField: 'password',
         passReqToCallback: true,
     },   
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+    function(req, email, password, done) {
+        req.app.models.user.findOne({ email: email }, function(err, user) {
             if (err) { return done(err); }
             if (user) {
-                return done(null, false, { message: 'Létező neptun.' });
+                return done(null, false, { message: 'Létező email.' });
             }
             req.app.models.user.create(req.body)
             .then(function (user) {
@@ -74,12 +74,12 @@ passport.use('local-signup', new LocalStrategy({
 
 // Stratégia
 passport.use('local', new LocalStrategy({
-        usernameField: 'neptun',
+        usernameField: 'email',
         passwordField: 'password',
         passReqToCallback: true,
     },
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+    function(req, email, password, done) {
+        req.app.models.user.findOne({ email: email }, function(err, user) {
             if (err) { return done(err); }
             if (!user || !user.validPassword(password)) {
                 return done(null, false, { message: 'Helytelen adatok.' });

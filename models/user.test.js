@@ -28,7 +28,7 @@ describe('UserModel', function () {
 
     function getUserData() {
         return {
-            neptun: 'abcdef',
+            email: 'abcdef',
             password: 'jelszo',
             surname: 'Gipsz',
             forename: 'Jakab',
@@ -44,14 +44,14 @@ describe('UserModel', function () {
     
     it('should be able to create a user', function () {
         return User.create({
-                neptun: 'abcdef',
+                email: 'abcdef',
                 password: 'jelszo',
                 surname: 'Gipsz',
                 forename: 'Jakab',
                 avatar: '',
         })
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
+            expect(user.email).to.equal('abcdef');
             expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
             expect(user.surname).to.equal('Gipsz');
             expect(user.forename).to.equal('Jakab');
@@ -62,10 +62,10 @@ describe('UserModel', function () {
     it('should be able to find a user', function() {
         return User.create(getUserData())
         .then(function(user) {
-            return User.findOneByNeptun(user.neptun);
+            return User.findOneByemail(user.email);
         })
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
+            expect(user.email).to.equal('abcdef');
             expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
             expect(user.surname).to.equal('Gipsz');
             expect(user.forename).to.equal('Jakab');

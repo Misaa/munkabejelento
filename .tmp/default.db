@@ -84,6 +84,28 @@
         "createdAt": "2015-11-08T17:13:11.575Z",
         "updatedAt": "2015-11-08T17:13:11.575Z",
         "id": 1
+      },
+      {
+        "surname": "a",
+        "forename": "a",
+        "email": "a",
+        "password": "$2a$10$/8/hxrMiarlmuvdlyXEHEeDTYwgoNwAXu7.UjdAQe0/cALKhGcrfK",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-09T10:31:58.279Z",
+        "updatedAt": "2015-11-09T10:31:58.279Z",
+        "id": 2
+      },
+      {
+        "surname": "c",
+        "forename": "c",
+        "email": "c",
+        "password": "$2a$10$YEssAeKm73L6GJSeiq3qOeSqlUhUW1WXI7pXX1j5Ylx4tq.IuPJpi",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-09T10:32:09.117Z",
+        "updatedAt": "2015-11-09T10:32:09.117Z",
+        "id": 3
       }
     ]
   },
@@ -170,7 +192,7 @@
       }
     },
     "user": {
-      "neptun": {
+      "email": {
         "type": "string",
         "unique": true
       },
@@ -213,10 +235,10 @@
       "id": 2
     },
     "user": {
-      "id": 1
+      "id": 3
     },
     "timesheet": {
-      "id": 6
+      "id": 8
     }
   }
 }
