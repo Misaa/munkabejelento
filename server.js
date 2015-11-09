@@ -138,7 +138,6 @@ app.use(setLocalsForLayout());
 
 //endpoints
 app.use('/', indexController);
-//app.use('/errors', errorController);
 app.use('/timesheets', ensureAuthenticated, errorController);
 app.use('/login', loginController);
 

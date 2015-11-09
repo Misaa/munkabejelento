@@ -15,7 +15,7 @@ describe('User visits index page', function() {
     });
     
     it('should see welcome page', function() {
-        browser.assert.text('div.page-header > h1', 'zs az IK-n');
+        browser.assert.text('div.page-header > h1', 'Munkabejelentés');
     });
 });
 

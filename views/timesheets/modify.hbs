@@ -1,0 +1,33 @@
+{{#extend "scripts"}}
+<script src="/lib/bootstrap-validator/dist/validator.min.js"></script>
+{{/extend}}
+
+
+<form class="form-horizontal" method="post" action="/timesheets/modify/apply">
+    <fieldset>
+        <div class="form-group">
+            <label for="helyszin" class="col-lg-2 control-label">Helyszín*</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="helyszin" name="helyszin" placeholder="Pl. SmartX Budafoki út 209" type="text" value="{{data.location}}">
+                {{#if validationErrors.helyszin}}
+                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="leiras" class="col-lg-2 control-label">Leírás</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows=<"2" id="leiras" name="leiras" placeholder="Pl. Ügyféllista modul tesztelése..." >{{data.description}}</textarea> 
+            <span class="help-block">Meg kell adni a helyszínt, a leírás nem kötelező.</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <input type="hidden" name="id" value="{{data.id}}">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+

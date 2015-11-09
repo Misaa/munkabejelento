@@ -3,11 +3,18 @@ module.exports = {
     identity: 'timesheet',
     connection: 'default',
     attributes: {
-        date: {
+        date_in: {
             type: 'datetime',
             defaultsTo: function () { return new Date(); },
             required: true,
         },
+        
+        date_out: {
+            type: 'datetime',
+            defaultsTo: function () { return new Date(); },
+            required: true,
+        },
+        
         status: {
             type: 'string',
             enum: ['new', 'assigned', 'success', 'rejected', 'pending'],
@@ -21,7 +28,6 @@ module.exports = {
             type: 'string',
             required: true,
         },
-
         user: {
             model: 'user',
         },

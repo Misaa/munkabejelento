@@ -16,19 +16,26 @@
 <table class="table table-striped table-hover" id="errorTable">
     <thead>
         <tr>
-            <th>Időpont</th>
+            <th>Érkezési idő</th>
             <th>Státusz</th>
             <th>Helyszín</th>
             <th>Leírás</th>
+            <th>Távozási idő</th>
+        
         </tr>   
     </thead>
     <tbody>
         {{#each timesheets}}
         <tr>
-            <td>{{date}}</td>
+            
+            <td>{{date_in}}</td>
             <td><span class="label label-{{statusClass}}">{{statusText}}</span></td>
             <td>{{location}}</td>
             <td><span class="badge">{{numberOfMessages}}</span> {{description}}</td>
+            <td>{{date_out}}</td>
+            <td><form method="post" action ="/timesheets/modify"><input type="hidden" name="id" value="{{id}}"><button type="submit" class="btn btn-primary">Módosítás</button></form></td>
+            <td><form method="post" action ="/timesheets/delete"><input type="hidden" name="id" value="{{id}}"><button type="submit" class="btn btn-primary">Törlés</button></form></td>
+            
         </tr>
         {{/each}}
     </tbody>
