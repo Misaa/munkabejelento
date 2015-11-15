@@ -9,7 +9,7 @@ ______
 - Legyen lehetőség bejelentkezésre
 - Bizonyos funkciók csak bejelentkezést követően legyenek elérhetőek
 - Az alkalmazással a regisztrált felhasználók tudjanak létrehozni munkalapokat
-- Saját munkalapokat lehessen  (leírást és helyszínt, az érzkezési és távozási idő és státusz automatikusan állítódik)
+- Saját munkalapokat lehessen módosítani (leírást és helyszínt, az érkezési és távozási idő és státusz automatikusan állítódik)
 - Saját munkalapokat lehessen törölni
 - Saját munkalapok adatainak megtekintése egy listában
 
@@ -31,8 +31,10 @@ Ezek az alábbiak:
   - saját, már meglévő munkalap szerkesztése
   - saját, már meglévő munkalap törlése
 
-![Használati eset diagram](docs/images/hasznalati_eset_diagram.png)
-![Új munka felvitelének pontos menete](docs/images/folyamatleiras.png)
+######**Használati eset diagram**
+![](docs/images/hasznalati_eset_diagram.png)
+######**Új munka felvitelének pontos menete**
+![](docs/images/folyamatleiras.png)
 
 ______
 ##Tervezés
@@ -42,11 +44,11 @@ ______
 ![](docs/images/oldalterkep.png)
 ######Végpontok
 
-- GET  /: főoldal
-- GET  /login: bejelentkezés oldal
+- GET  /: Főoldal
+- GET  /login: Bejelentkezés oldal
 - POST /login: Bejelentkezés (adatok elküldése)
-- GET  /login/signup: regisztráció oldal
-- POST /login/signup: regisztráció (adatok elküldése)
+- GET  /login/signup: Regisztráció oldal
+- POST /login/signup: Regisztráció (adatok elküldése)
 
 - GET  /timesheets/list: Munkabejelentő oldal
 - GET  /timesheets/new: Új munka oldal
@@ -87,14 +89,7 @@ ______
 ______
 ##Tesztelés
 
-
-Tesztelési környezet bemutatása
-Egységtesztek:
-![](docs/images/egysegteszt.png)
-Funkcionális felületi tesztek: legalább 1 folyamat tesztelése
-VAGY: Selenium IDE használatával
-VAGY: zombie.js használatával
-Tesztesetek felsorolása:
+######Tesztesetek felsorolása:
 - nem regisztrált adatokkal való belépés
 - regisztrált adatokkal való belépés
 - már létező felhasználó adataival való regisztrálás
@@ -108,8 +103,6 @@ Tesztesetek felsorolása:
 - munka törlése
 - kijelentkezés
 
-
-
 ______
 ##Felhasználói dokumentáció
 #####**Telepítés lépései:**
@@ -122,11 +115,11 @@ ______
 - Az Új munka felvitele gomb után lehetőség van új munka rögzítésére
   - Az érkezési idő automatikusan az új munka rögzítésének időpontja lesz, később nem módosítható
   - A helyszín kitöltése kötelező
-  - A leírás kitültése opcionális
+  - A leírás kitöltése opcionális
 - A Módosítás gombra kattintva módosíthatjuk a helyszín és leírás mezőket. A távozási idő automatikusan rögzítésre kerül a módosítás időpontjával.
 - A Törlés gombra kattintva törölhetjük az adott munkát
 
 Ajánlat a program helyes használatához:
-- Munkahelyre éréskor program indítása
+- Munkahelyre érkezéskor program indítása
 - Munka kezdése előtt közvetlenül létrehozunk egy új munkát, megadjuk a munkavégzés helyszínét
-- Távozás előtt közvetlenül módosítjuk a munkát, megadjuk a leírásban az elvégzett munkát
+- Távozás előtt közvetlenül módosítjuk a munkát, megadjuk a leírásban az elvégzett munka jellegét
