@@ -1,8 +1,6 @@
 # Munkabejelentő
 ##Az ELTE IK Alkalmazások fejlesztése tárgy keretein belül készített 1. beadandó
 
-======
-
 ______
 ##Követelményanalízis
 
@@ -45,7 +43,6 @@ ______
 ######Végpontok
 
 - GET  /: főoldal
-- 
 - GET  /login: bejelentkezés oldal
 - POST /login: Bejelentkezés (adatok elküldése)
 - GET  /login/signup: regisztráció oldal
@@ -65,9 +62,11 @@ Designterv
 ![](docs/images/design2.png)
 #####**Osztálymodell**
 Adatmodell
+
 ![](docs/images/adatmodell.png)
 
 Állapotdiagram
+
 ![](docs/images/allapotdiagramm.png)
 
 ______
