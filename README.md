@@ -1,4 +1,4 @@
-# munkabejelento
+# Munkabejelentő
 ##Az ELTE IK Alkalmazások fejlesztése tárgy keretein belül készített 1. beadandó
 
 ======
@@ -38,6 +38,38 @@ Ezek az alábbiak:
 
 ______
 ##Tervezés
+
+#####**Architektúra terv**
+######Oldaltérkép
+![](docs/images/oldalterkep.png)
+######Végpontok
+
+- GET  /: főoldal
+- 
+- GET  /login: bejelentkezés oldal
+- POST /login: Bejelentkezés (adatok elküldése)
+- GET  /login/signup: regisztráció oldal
+- POST /login/signup: regisztráció (adatok elküldése)
+
+- GET  /timesheets/list: Munkabejelentő oldal
+- GET  /timesheets/new: Új munka oldal
+- POST /timesheets/new: Új munka létrehozása (adatok elküldése)
+- GET  /timesheets/modify: Munka módosítása oldal
+- POST /timesheets/modify: Munka módosítása (adatok elküldése)
+- POST /timesheets/modify/apply: Munka módosítása (adatok elküldése)
+- POST /timesheets/delete: Munka törlése (adatok törlése)
+
+#####**Felhasználóifelület-modell**
+Designterv
+![](docs/images/design1.png)
+![](docs/images/design2.png)
+#####**Osztálymodell**
+Adatmodell
+![](docs/images/adatmodell.png)
+
+Állapotdiagram
+![](docs/images/allapotdiagramm.png)
+
 ______
 ##Implementáció
 
