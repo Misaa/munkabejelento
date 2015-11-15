@@ -62,7 +62,7 @@ describe('UserModel', function () {
     it('should be able to find a user', function() {
         return User.create(getUserData())
         .then(function(user) {
-            return User.findOneByemail(user.email);
+            return User.findOneByEmail(user.email);
         })
         .then(function (user) {
             expect(user.email).to.equal('abcdef');

@@ -86,6 +86,30 @@ ______
 
 ______
 ##Tesztelés
+
+
+Tesztelési környezet bemutatása
+Egységtesztek:
+![](docs/images/egysegteszt.png)
+Funkcionális felületi tesztek: legalább 1 folyamat tesztelése
+VAGY: Selenium IDE használatával
+VAGY: zombie.js használatával
+Tesztesetek felsorolása:
+- nem regisztrált adatokkal való belépés
+- regisztrált adatokkal való belépés
+- már létező felhasználó adataival való regisztrálás
+- még nem létező adatokkal való regisztrálás
+- új munka létrehozása a leírás és a helyszín üresen hagyásával
+- új munka létrehozása csak a leírás kitöltésével
+- új munka létrehozása a aleírás és a helyszín kitöltésével
+- munka módosítása a leírás és a helyszín kitörlésévelnp
+- munka módosítása a helyszín kirötlésével
+- munka módosítása a leírás és a helyszín kitöltésével
+- munka törlése
+- kijelentkezés
+
+
+
 ______
 ##Felhasználói dokumentáció
 #####**Telepítés lépései:**
